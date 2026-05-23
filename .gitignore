@@ -216,3 +216,29 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# API Key
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env/
+
+# Conda
+*.conda
+
+# Vector DB
+vectorstore/
+
+# Streamlit cache
+.streamlit/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
