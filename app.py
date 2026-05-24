@@ -18,6 +18,23 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 st.markdown("""
+<div class="kstia-header">
+    <img src="https://raw.githubusercontent.com/425range/KSTIA_Web/main/images/logo.png"
+         width="140"
+         style="margin-bottom: 10px;" />
+
+    <div class="kstia-title">
+        KSTIA AI Assistant
+    </div>
+
+    <div class="kstia-subtitle">
+        대한관광스키지도자연맹 AI 안내 챗봇
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+st.image("assets/관냥이.png", width=140)
+st.markdown("""
 <style>
 /* 전체 배경 */
 .stApp {
@@ -27,7 +44,8 @@ st.markdown("""
 
 /* 메인 컨테이너 */
 .block-container {
-    padding-top: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
     max-width: 900px;
 }
 
