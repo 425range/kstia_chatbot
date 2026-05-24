@@ -22,14 +22,6 @@ st.markdown("""
     <img src="https://raw.githubusercontent.com/425range/KSTIA_Web/main/images/logo.png"
          width="140"
          style="margin-bottom: 10px;" />
-
-    <div class="kstia-title">
-        KSTIA AI Assistant
-    </div>
-
-    <div class="kstia-subtitle">
-        대한관광스키지도자연맹 AI 안내 챗봇
-    </div>
 </div>
 """, unsafe_allow_html=True)
 
