@@ -13,10 +13,10 @@ load_dotenv()
 
 st.set_page_config(
     page_title="KSTIA AI Assistant",
-    page_icon="🎿",
-    layout="centered"
+    page_icon="assets/관냥이.png",
+    layout="centered",
+    initial_sidebar_state="collapsed"
 )
-
 st.markdown("""
 <style>
 /* 전체 배경 */
