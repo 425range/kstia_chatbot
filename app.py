@@ -19,15 +19,19 @@ st.set_page_config(
 
 st.markdown("""
 <style>
+/* 전체 배경 */
 .stApp {
     background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 100%);
+    color: #111111;
 }
 
+/* 메인 컨테이너 */
 .block-container {
     padding-top: 2rem;
     max-width: 900px;
 }
 
+/* 헤더 카드 */
 .kstia-header {
     text-align: center;
     padding: 24px 16px;
@@ -37,6 +41,7 @@ st.markdown("""
     margin-bottom: 24px;
 }
 
+/* 제목 */
 .kstia-title {
     font-size: 34px;
     font-weight: 800;
@@ -44,34 +49,51 @@ st.markdown("""
     margin-top: 12px;
 }
 
+/* 부제목 */
 .kstia-subtitle {
     font-size: 16px;
-    color: #555;
+    color: #444444;
     margin-top: 8px;
 }
 
+/* 일반 텍스트 */
+p, h1, h2, h3, h4, h5, h6, label, span, div {
+    color: #111111 !important;
+}
+
+/* 버튼 */
 .stButton > button {
     border-radius: 999px;
     border: 1px solid #0b5ed7;
-    color: #0b5ed7;
+    color: #0b5ed7 !important;
+    background-color: white;
     font-weight: 700;
 }
 
 .stButton > button:hover {
     background-color: #0b5ed7;
-    color: white;
+    color: white !important;
+}
+
+/* 채팅 입력창 */
+.stChatInputContainer {
+    background-color: white;
+}
+
+/* 사용자/챗봇 메시지 */
+[data-testid="stChatMessage"] {
+    background-color: white;
+    border-radius: 18px;
+    padding: 12px;
+    margin-bottom: 10px;
+    color: #111111 !important;
+}
+
+/* expander */
+.streamlit-expanderHeader {
+    color: #111111 !important;
 }
 </style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-<div class="kstia-header">
-    <div style="font-size:52px;">🎿</div>
-    <div class="kstia-title">KSTIA AI Assistant</div>
-    <div class="kstia-subtitle">
-        대한관광스키지도자연맹 문서 기반 AI 안내 챗봇
-    </div>
-</div>
 """, unsafe_allow_html=True)
 
 # 0. Chat record reset
