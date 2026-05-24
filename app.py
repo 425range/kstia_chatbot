@@ -25,7 +25,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.image("assets/관냥이.png", width=140)
 st.markdown("""
 <style>
 /* 전체 배경 */
