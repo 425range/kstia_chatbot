@@ -11,8 +11,68 @@ from langchain_core.runnables import RunnablePassthrough
 
 load_dotenv()
 
-st.markdown('<div class="chat-title">🎿 KSTIA AI Assistant</div>', unsafe_allow_html=True)
-st.caption("대한관광스키지도자연맹 AI 안내 챗봇")
+st.set_page_config(
+    page_title="KSTIA AI Assistant",
+    page_icon="🎿",
+    layout="centered"
+)
+
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(180deg, #f4f8ff 0%, #ffffff 100%);
+}
+
+.block-container {
+    padding-top: 2rem;
+    max-width: 900px;
+}
+
+.kstia-header {
+    text-align: center;
+    padding: 24px 16px;
+    border-radius: 24px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+}
+
+.kstia-title {
+    font-size: 34px;
+    font-weight: 800;
+    color: #0b5ed7;
+    margin-top: 12px;
+}
+
+.kstia-subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-top: 8px;
+}
+
+.stButton > button {
+    border-radius: 999px;
+    border: 1px solid #0b5ed7;
+    color: #0b5ed7;
+    font-weight: 700;
+}
+
+.stButton > button:hover {
+    background-color: #0b5ed7;
+    color: white;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="kstia-header">
+    <div style="font-size:52px;">🎿</div>
+    <div class="kstia-title">KSTIA AI Assistant</div>
+    <div class="kstia-subtitle">
+        대한관광스키지도자연맹 문서 기반 AI 안내 챗봇
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 # 0. Chat record reset
 if "messages" not in st.session_state:
@@ -123,7 +183,7 @@ if question:
     with st.chat_message("user"):
         st.write(question)
 
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant", avatar="assets/관냥이.png"):
         with st.spinner("답변 생성 중..."):
             docs = retriever.invoke(question)
             context = format_docs(docs)
